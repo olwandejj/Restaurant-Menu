@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffdf6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #ffcc70;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+  gap: 2em;
+}
+
+.menu-item {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 1em;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.category-buttons {
+  margin: 1em 0;
+}
+
+.category-buttons button {
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  background-color: #ffaf40;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.category-buttons button:hover {
+  background-color: #ff9f1c;
+}
+
+
+/* Fade-in effect for items */
+.menu-item {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.filter-btn:hover {
+  background-color: #2980b9;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

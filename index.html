@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Digital Menu</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>🍽️ Gourmet Hub</h1>
+    <p>Click a dish to hear about it!</p>
+    <div class="category-buttons">
+      <button onclick="filterCategory('all')">All</button>
+      <button onclick="filterCategory('starter')">Starters</button>
+      <button onclick="filterCategory('main')">Mains</button>
+      <button onclick="filterCategory('dessert')">Desserts</button>
+    </div>
+  </header>
+
+
+
+  <main class="menu">
+
+  <!-- STARTERS (8 items) -->
+  <div class="menu-item starter" data-desc="Fresh garden salad with vinaigrette." onclick="speak(this)">
+    <img src="images/salad.jpg" alt="Salad" />
+    <h2>Garden Salad</h2>
+    <p>Fresh vegetables with dressing.</p>
+  </div>
+
+  <div class="menu-item starter" data-desc="Crispy vegetable spring rolls." onclick="speak(this)">
+    <img src="images/spring_rolls.jpg" alt="Spring Rolls" />
+    <h2>Spring Rolls</h2>
+    <p>Stuffed with fresh vegetables.</p>
+  </div>
+
+  <div class="menu-item starter" data-desc="Spicy buffalo wings with ranch dip." onclick="speak(this)">
+    <img src="images/wings.jpg" alt="Wings" />
+    <h2>Buffalo Wings</h2>
+    <p>Hot and crispy chicken wings.</p>
+  </div>
+
+  <div class="menu-item starter" data-desc="Sliced tomatoes, basil, and mozzarella." onclick="speak(this)">
+    <img src="images/caprese.jpg" alt="Caprese" />
+    <h2>Caprese Salad</h2>
+    <p>Italian starter with balsamic glaze.</p>
+  </div>
+
+  <div class="menu-item starter" data-desc="Hot creamy soup with mushrooms." onclick="speak(this)">
+    <img src="images/mushroom_soup.jpg" alt="Mushroom Soup" />
+    <h2>Mushroom Soup</h2>
+    <p>Earthy and creamy.</p>
+  </div>
+
+  <div class="menu-item starter" data-desc="Baked cheesy garlic bread." onclick="speak(this)">
+    <img src="images/garlic_bread.jpg" alt="Garlic Bread" />
+    <h2>Garlic Bread</h2>
+    <p>Warm and cheesy.</p>
+  </div>
+
+  <div class="menu-item starter" data-desc="Shrimp cocktail with lemon sauce." onclick="speak(this)">
+    <img src="images/shrimp.jpg" alt="Shrimp Cocktail" />
+    <h2>Shrimp Cocktail</h2>
+    <p>Classic seafood appetizer.</p>
+  </div>
+
+  <div class="menu-item starter" data-desc="Sautéed mushrooms in garlic butter." onclick="speak(this)">
+    <img src="images/sauteed_mushrooms.jpg" alt="Sautéed Mushrooms" />
+    <h2>Sautéed Mushrooms</h2>
+    <p>Delicious and aromatic.</p>
+  </div>
+
+  <!-- MAINS (8 items) -->
+  <div class="menu-item main" data-desc="Classic burger with beef patty and fries." onclick="speak(this)">
+    <img src="images/burger.jpg" alt="Burger" />
+    <h2>Classic Burger</h2>
+    <p>Served with fries.</p>
+  </div>
+
+  <div class="menu-item main" data-desc="Wood-fired Italian pizza with mozzarella." onclick="speak(this)">
+    <img src="images/pizza.jpg" alt="Pizza" />
+    <h2>Italian Pizza</h2>
+    <p>Stone-baked and fresh.</p>
+  </div>
+
+  <div class="menu-item main" data-desc="Grilled chicken breast with mashed potatoes." onclick="speak(this)">
+    <img src="images/grilled_chicken.jpg" alt="Grilled Chicken" />
+    <h2>Grilled Chicken</h2>
+    <p>Juicy and healthy option.</p>
+  </div>
+
+  <div class="menu-item main" data-desc="Pasta with creamy Alfredo sauce." onclick="speak(this)">
+    <img src="images/alfredo.jpg" alt="Alfredo Pasta" />
+    <h2>Alfredo Pasta</h2>
+    <p>Rich and cheesy delight.</p>
+  </div>
+
+  <div class="menu-item main" data-desc="Spicy beef tacos with salsa." onclick="speak(this)">
+    <img src="images/tacos.jpg" alt="Tacos" />
+    <h2>Beef Tacos</h2>
+    <p>Served with spicy salsa.</p>
+  </div>
+
+  <div class="menu-item main" data-desc="Stir-fried noodles with vegetables and chicken." onclick="speak(this)">
+    <img src="images/noodles.jpg" alt="Noodles" />
+    <h2>Chicken Noodles</h2>
+    <p>Asian-style stir fry.</p>
+  </div>
+
+  <div class="menu-item main" data-desc="Pan-fried salmon with lemon butter." onclick="speak(this)">
+    <img src="images/salmon.jpg" alt="Salmon" />
+    <h2>Grilled Salmon</h2>
+    <p>Light and flavorful.</p>
+  </div>
+
+  <div class="menu-item main" data-desc="Vegetarian curry with rice." onclick="speak(this)">
+    <img src="images/vege_curry.jpg" alt="Veg Curry" />
+    <h2>Vegetable Curry</h2>
+    <p>Spicy and satisfying.</p>
+  </div>
+
+  <!-- DESSERTS (8 items) -->
+  <div class="menu-item dessert" data-desc="Rich chocolate cake with fudge icing." onclick="speak(this)">
+    <img src="images/cake.jpg" alt="Chocolate Cake" />
+    <h2>Chocolate Cake</h2>
+    <p>For chocolate lovers.</p>
+  </div>
+
+  <div class="menu-item dessert" data-desc="Vanilla ice cream with caramel drizzle." onclick="speak(this)">
+    <img src="images/ice_cream.jpg" alt="Ice Cream" />
+    <h2>Vanilla Ice Cream</h2>
+    <p>Cool and sweet.</p>
+  </div>
+
+  <div class="menu-item dessert" data-desc="Mini cheesecakes with berry topping." onclick="speak(this)">
+    <img src="images/cheesecake.jpg" alt="Cheesecake" />
+    <h2>Berry Cheesecake</h2>
+    <p>Sweet and tangy.</p>
+  </div>
+
+  <div class="menu-item dessert" data-desc="Warm apple pie with cinnamon." onclick="speak(this)">
+    <img src="images/apple_pie.jpg" alt="Apple Pie" />
+    <h2>Apple Pie</h2>
+    <p>Classic comfort dessert.</p>
+  </div>
+
+  <div class="menu-item dessert" data-desc="Chocolate lava cake with molten center." onclick="speak(this)">
+    <img src="images/lava_cake.jpg" alt="Lava Cake" />
+    <h2>Molten Lava Cake</h2>
+    <p>Warm gooey center.</p>
+  </div>
+
+  <div class="menu-item dessert" data-desc="Fruit parfait with layers of yogurt and granola." onclick="speak(this)">
+    <img src="images/parfait.jpg" alt="Parfait" />
+    <h2>Fruit Parfait</h2>
+    <p>Healthy and sweet.</p>
+  </div>
+
+  <div class="menu-item dessert" data-desc="Churros with cinnamon sugar and chocolate dip." onclick="speak(this)">
+    <img src="images/churros.jpg" alt="Churros" />
+    <h2>Churros</h2>
+    <p>Crispy and fun.</p>
+  </div>
+
+  <div class="menu-item dessert" data-desc="Strawberry shortcake with whipped cream." onclick="speak(this)">
+    <img src="images/shortcake.jpg" alt="Shortcake" />
+    <h2>Strawberry Shortcake</h2>
+    <p>Light and fruity.</p>
+  </div>
+</main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
