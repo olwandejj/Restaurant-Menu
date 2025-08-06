@@ -32,3 +32,18 @@ function speak(element) {
   speechSynthesis.cancel(); // stop previous
   speechSynthesis.speak(utterance);
 }
+
+function viewItem(element) {
+  const name = element.getAttribute('data-name');
+  const desc = element.getAttribute('data-desc');
+  const img = element.getAttribute('data-img');
+
+  // Store data in localStorage
+  localStorage.setItem('itemName', name);
+  localStorage.setItem('itemDesc', desc);
+  localStorage.setItem('itemImg', img);
+
+  // Navigate to item page
+  window.location.href = 'item.html';
+}
+

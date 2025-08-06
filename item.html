@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu Item Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .item-container {
+      max-width: 600px;
+      margin: 2em auto;
+      text-align: center;
+      padding: 2em;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 15px;
+    }
+    .item-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+    .back-btn {
+      margin-top: 2em;
+      display: inline-block;
+      padding: 0.6em 1.2em;
+      background-color: #ffaf40;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .back-btn:hover {
+      background-color: #ff9f1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="item-container">
+    <h1 id="item-title"></h1>
+    <img id="item-img" src="" alt="Dish Image" />
+    <p id="item-desc"></p>
+    <a href="index.html" class="back-btn">⬅️ Back to Menu</a>
+  </div>
+
+  <script>
+    // Load data from localStorage
+    const name = localStorage.getItem('itemName');
+    const desc = localStorage.getItem('itemDesc');
+    const img = localStorage.getItem('itemImg');
+
+    // Display on the page
+    document.getElementById('item-title').textContent = name;
+    document.getElementById('item-desc').textContent = desc;
+    document.getElementById('item-img').src = img;
+    document.getElementById('item-img').alt = name;
+  </script>
+</body>
+</html>

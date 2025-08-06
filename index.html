@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>🍽️ Gourmet Hub</h1>
-    <p>Click a dish to hear about it!</p>
+    <p>Click a dish to view more details!</p>
     <div class="category-buttons">
       <button onclick="filterCategory('all')">All</button>
       <button onclick="filterCategory('starter')">Starters</button>
@@ -18,158 +18,156 @@
     </div>
   </header>
 
-
-
   <main class="menu">
 
-  <!-- STARTERS (8 items) -->
-  <div class="menu-item starter" data-desc="Fresh garden salad with vinaigrette." onclick="speak(this)">
-    <img src="images/salad.jpg" alt="Salad" />
-    <h2>Garden Salad</h2>
-    <p>Fresh vegetables with dressing.</p>
-  </div>
+    <!-- STARTERS -->
+    <div class="menu-item starter" data-name="Garden Salad" data-desc="Fresh garden salad with vinaigrette." data-img="images/salad.jpg" onclick="viewItem(this)">
+      <img src="images/salad.jpg" alt="Garden Salad" />
+      <h2>Garden Salad</h2>
+      <p>Fresh vegetables with dressing.</p>
+    </div>
 
-  <div class="menu-item starter" data-desc="Crispy vegetable spring rolls." onclick="speak(this)">
-    <img src="images/spring_rolls.jpg" alt="Spring Rolls" />
-    <h2>Spring Rolls</h2>
-    <p>Stuffed with fresh vegetables.</p>
-  </div>
+    <div class="menu-item starter" data-name="Spring Rolls" data-desc="Crispy vegetable spring rolls." data-img="images/spring_rolls.jpg" onclick="viewItem(this)">
+      <img src="images/spring_rolls.jpg" alt="Spring Rolls" />
+      <h2>Spring Rolls</h2>
+      <p>Stuffed with fresh vegetables.</p>
+    </div>
 
-  <div class="menu-item starter" data-desc="Spicy buffalo wings with ranch dip." onclick="speak(this)">
-    <img src="images/wings.jpg" alt="Wings" />
-    <h2>Buffalo Wings</h2>
-    <p>Hot and crispy chicken wings.</p>
-  </div>
+    <div class="menu-item starter" data-name="Buffalo Wings" data-desc="Spicy buffalo wings with ranch dip." data-img="images/wings.jpg" onclick="viewItem(this)">
+      <img src="images/wings.jpg" alt="Buffalo Wings" />
+      <h2>Buffalo Wings</h2>
+      <p>Hot and crispy chicken wings.</p>
+    </div>
 
-  <div class="menu-item starter" data-desc="Sliced tomatoes, basil, and mozzarella." onclick="speak(this)">
-    <img src="images/caprese.jpg" alt="Caprese" />
-    <h2>Caprese Salad</h2>
-    <p>Italian starter with balsamic glaze.</p>
-  </div>
+    <div class="menu-item starter" data-name="Caprese Salad" data-desc="Sliced tomatoes, basil, and mozzarella." data-img="images/caprese.jpg" onclick="viewItem(this)">
+      <img src="images/caprese.jpg" alt="Caprese Salad" />
+      <h2>Caprese Salad</h2>
+      <p>Italian starter with balsamic glaze.</p>
+    </div>
 
-  <div class="menu-item starter" data-desc="Hot creamy soup with mushrooms." onclick="speak(this)">
-    <img src="images/mushroom_soup.jpg" alt="Mushroom Soup" />
-    <h2>Mushroom Soup</h2>
-    <p>Earthy and creamy.</p>
-  </div>
+    <div class="menu-item starter" data-name="Mushroom Soup" data-desc="Hot creamy soup with mushrooms." data-img="images/mushroom_soup.jpg" onclick="viewItem(this)">
+      <img src="images/mushroom_soup.jpg" alt="Mushroom Soup" />
+      <h2>Mushroom Soup</h2>
+      <p>Earthy and creamy.</p>
+    </div>
 
-  <div class="menu-item starter" data-desc="Baked cheesy garlic bread." onclick="speak(this)">
-    <img src="images/garlic_bread.jpg" alt="Garlic Bread" />
-    <h2>Garlic Bread</h2>
-    <p>Warm and cheesy.</p>
-  </div>
+    <div class="menu-item starter" data-name="Garlic Bread" data-desc="Baked cheesy garlic bread." data-img="images/garlic_bread.jpg" onclick="viewItem(this)">
+      <img src="images/garlic_bread.jpg" alt="Garlic Bread" />
+      <h2>Garlic Bread</h2>
+      <p>Warm and cheesy.</p>
+    </div>
 
-  <div class="menu-item starter" data-desc="Shrimp cocktail with lemon sauce." onclick="speak(this)">
-    <img src="images/shrimp.jpg" alt="Shrimp Cocktail" />
-    <h2>Shrimp Cocktail</h2>
-    <p>Classic seafood appetizer.</p>
-  </div>
+    <div class="menu-item starter" data-name="Shrimp Cocktail" data-desc="Shrimp cocktail with lemon sauce." data-img="images/shrimp.jpg" onclick="viewItem(this)">
+      <img src="images/shrimp.jpg" alt="Shrimp Cocktail" />
+      <h2>Shrimp Cocktail</h2>
+      <p>Classic seafood appetizer.</p>
+    </div>
 
-  <div class="menu-item starter" data-desc="Sautéed mushrooms in garlic butter." onclick="speak(this)">
-    <img src="images/sauteed_mushrooms.jpg" alt="Sautéed Mushrooms" />
-    <h2>Sautéed Mushrooms</h2>
-    <p>Delicious and aromatic.</p>
-  </div>
+    <div class="menu-item starter" data-name="Sautéed Mushrooms" data-desc="Sautéed mushrooms in garlic butter." data-img="images/sauteed_mushrooms.jpg" onclick="viewItem(this)">
+      <img src="images/sauteed_mushrooms.jpg" alt="Sautéed Mushrooms" />
+      <h2>Sautéed Mushrooms</h2>
+      <p>Delicious and aromatic.</p>
+    </div>
 
-  <!-- MAINS (8 items) -->
-  <div class="menu-item main" data-desc="Classic burger with beef patty and fries." onclick="speak(this)">
-    <img src="images/burger.jpg" alt="Burger" />
-    <h2>Classic Burger</h2>
-    <p>Served with fries.</p>
-  </div>
+    <!-- MAINS -->
+    <div class="menu-item main" data-name="Classic Burger" data-desc="Classic burger with beef patty and fries." data-img="images/burger.jpg" onclick="viewItem(this)">
+      <img src="images/burger.jpg" alt="Classic Burger" />
+      <h2>Classic Burger</h2>
+      <p>Served with fries.</p>
+    </div>
 
-  <div class="menu-item main" data-desc="Wood-fired Italian pizza with mozzarella." onclick="speak(this)">
-    <img src="images/pizza.jpg" alt="Pizza" />
-    <h2>Italian Pizza</h2>
-    <p>Stone-baked and fresh.</p>
-  </div>
+    <div class="menu-item main" data-name="Italian Pizza" data-desc="Wood-fired Italian pizza with mozzarella." data-img="images/pizza.jpg" onclick="viewItem(this)">
+      <img src="images/pizza.jpg" alt="Italian Pizza" />
+      <h2>Italian Pizza</h2>
+      <p>Stone-baked and fresh.</p>
+    </div>
 
-  <div class="menu-item main" data-desc="Grilled chicken breast with mashed potatoes." onclick="speak(this)">
-    <img src="images/grilled_chicken.jpg" alt="Grilled Chicken" />
-    <h2>Grilled Chicken</h2>
-    <p>Juicy and healthy option.</p>
-  </div>
+    <div class="menu-item main" data-name="Grilled Chicken" data-desc="Grilled chicken breast with mashed potatoes." data-img="images/grilled_chicken.jpg" onclick="viewItem(this)">
+      <img src="images/grilled_chicken.jpg" alt="Grilled Chicken" />
+      <h2>Grilled Chicken</h2>
+      <p>Juicy and healthy option.</p>
+    </div>
 
-  <div class="menu-item main" data-desc="Pasta with creamy Alfredo sauce." onclick="speak(this)">
-    <img src="images/alfredo.jpg" alt="Alfredo Pasta" />
-    <h2>Alfredo Pasta</h2>
-    <p>Rich and cheesy delight.</p>
-  </div>
+    <div class="menu-item main" data-name="Alfredo Pasta" data-desc="Pasta with creamy Alfredo sauce." data-img="images/alfredo.jpg" onclick="viewItem(this)">
+      <img src="images/alfredo.jpg" alt="Alfredo Pasta" />
+      <h2>Alfredo Pasta</h2>
+      <p>Rich and cheesy delight.</p>
+    </div>
 
-  <div class="menu-item main" data-desc="Spicy beef tacos with salsa." onclick="speak(this)">
-    <img src="images/tacos.jpg" alt="Tacos" />
-    <h2>Beef Tacos</h2>
-    <p>Served with spicy salsa.</p>
-  </div>
+    <div class="menu-item main" data-name="Beef Tacos" data-desc="Spicy beef tacos with salsa." data-img="images/tacos.jpg" onclick="viewItem(this)">
+      <img src="images/tacos.jpg" alt="Beef Tacos" />
+      <h2>Beef Tacos</h2>
+      <p>Served with spicy salsa.</p>
+    </div>
 
-  <div class="menu-item main" data-desc="Stir-fried noodles with vegetables and chicken." onclick="speak(this)">
-    <img src="images/noodles.jpg" alt="Noodles" />
-    <h2>Chicken Noodles</h2>
-    <p>Asian-style stir fry.</p>
-  </div>
+    <div class="menu-item main" data-name="Chicken Noodles" data-desc="Stir-fried noodles with vegetables and chicken." data-img="images/noodles.jpg" onclick="viewItem(this)">
+      <img src="images/noodles.jpg" alt="Chicken Noodles" />
+      <h2>Chicken Noodles</h2>
+      <p>Asian-style stir fry.</p>
+    </div>
 
-  <div class="menu-item main" data-desc="Pan-fried salmon with lemon butter." onclick="speak(this)">
-    <img src="images/salmon.jpg" alt="Salmon" />
-    <h2>Grilled Salmon</h2>
-    <p>Light and flavorful.</p>
-  </div>
+    <div class="menu-item main" data-name="Grilled Salmon" data-desc="Pan-fried salmon with lemon butter." data-img="images/salmon.jpg" onclick="viewItem(this)">
+      <img src="images/salmon.jpg" alt="Grilled Salmon" />
+      <h2>Grilled Salmon</h2>
+      <p>Light and flavorful.</p>
+    </div>
 
-  <div class="menu-item main" data-desc="Vegetarian curry with rice." onclick="speak(this)">
-    <img src="images/vege_curry.jpg" alt="Veg Curry" />
-    <h2>Vegetable Curry</h2>
-    <p>Spicy and satisfying.</p>
-  </div>
+    <div class="menu-item main" data-name="Vegetable Curry" data-desc="Vegetarian curry with rice." data-img="images/vege_curry.jpg" onclick="viewItem(this)">
+      <img src="images/vege_curry.jpg" alt="Vegetable Curry" />
+      <h2>Vegetable Curry</h2>
+      <p>Spicy and satisfying.</p>
+    </div>
 
-  <!-- DESSERTS (8 items) -->
-  <div class="menu-item dessert" data-desc="Rich chocolate cake with fudge icing." onclick="speak(this)">
-    <img src="images/cake.jpg" alt="Chocolate Cake" />
-    <h2>Chocolate Cake</h2>
-    <p>For chocolate lovers.</p>
-  </div>
+    <!-- DESSERTS -->
+    <div class="menu-item dessert" data-name="Chocolate Cake" data-desc="Rich chocolate cake with fudge icing." data-img="images/cake.jpg" onclick="viewItem(this)">
+      <img src="images/cake.jpg" alt="Chocolate Cake" />
+      <h2>Chocolate Cake</h2>
+      <p>For chocolate lovers.</p>
+    </div>
 
-  <div class="menu-item dessert" data-desc="Vanilla ice cream with caramel drizzle." onclick="speak(this)">
-    <img src="images/ice_cream.jpg" alt="Ice Cream" />
-    <h2>Vanilla Ice Cream</h2>
-    <p>Cool and sweet.</p>
-  </div>
+    <div class="menu-item dessert" data-name="Vanilla Ice Cream" data-desc="Vanilla ice cream with caramel drizzle." data-img="images/ice_cream.jpg" onclick="viewItem(this)">
+      <img src="images/ice_cream.jpg" alt="Vanilla Ice Cream" />
+      <h2>Vanilla Ice Cream</h2>
+      <p>Cool and sweet.</p>
+    </div>
 
-  <div class="menu-item dessert" data-desc="Mini cheesecakes with berry topping." onclick="speak(this)">
-    <img src="images/cheesecake.jpg" alt="Cheesecake" />
-    <h2>Berry Cheesecake</h2>
-    <p>Sweet and tangy.</p>
-  </div>
+    <div class="menu-item dessert" data-name="Berry Cheesecake" data-desc="Mini cheesecakes with berry topping." data-img="images/cheesecake.jpg" onclick="viewItem(this)">
+      <img src="images/cheesecake.jpg" alt="Berry Cheesecake" />
+      <h2>Berry Cheesecake</h2>
+      <p>Sweet and tangy.</p>
+    </div>
 
-  <div class="menu-item dessert" data-desc="Warm apple pie with cinnamon." onclick="speak(this)">
-    <img src="images/apple_pie.jpg" alt="Apple Pie" />
-    <h2>Apple Pie</h2>
-    <p>Classic comfort dessert.</p>
-  </div>
+    <div class="menu-item dessert" data-name="Apple Pie" data-desc="Warm apple pie with cinnamon." data-img="images/apple_pie.jpg" onclick="viewItem(this)">
+      <img src="images/apple_pie.jpg" alt="Apple Pie" />
+      <h2>Apple Pie</h2>
+      <p>Classic comfort dessert.</p>
+    </div>
 
-  <div class="menu-item dessert" data-desc="Chocolate lava cake with molten center." onclick="speak(this)">
-    <img src="images/lava_cake.jpg" alt="Lava Cake" />
-    <h2>Molten Lava Cake</h2>
-    <p>Warm gooey center.</p>
-  </div>
+    <div class="menu-item dessert" data-name="Molten Lava Cake" data-desc="Chocolate lava cake with molten center." data-img="images/lava_cake.jpg" onclick="viewItem(this)">
+      <img src="images/lava_cake.jpg" alt="Molten Lava Cake" />
+      <h2>Molten Lava Cake</h2>
+      <p>Warm gooey center.</p>
+    </div>
 
-  <div class="menu-item dessert" data-desc="Fruit parfait with layers of yogurt and granola." onclick="speak(this)">
-    <img src="images/parfait.jpg" alt="Parfait" />
-    <h2>Fruit Parfait</h2>
-    <p>Healthy and sweet.</p>
-  </div>
+    <div class="menu-item dessert" data-name="Fruit Parfait" data-desc="Fruit parfait with layers of yogurt and granola." data-img="images/parfait.jpg" onclick="viewItem(this)">
+      <img src="images/parfait.jpg" alt="Fruit Parfait" />
+      <h2>Fruit Parfait</h2>
+      <p>Healthy and sweet.</p>
+    </div>
 
-  <div class="menu-item dessert" data-desc="Churros with cinnamon sugar and chocolate dip." onclick="speak(this)">
-    <img src="images/churros.jpg" alt="Churros" />
-    <h2>Churros</h2>
-    <p>Crispy and fun.</p>
-  </div>
+    <div class="menu-item dessert" data-name="Churros" data-desc="Churros with cinnamon sugar and chocolate dip." data-img="images/churros.jpg" onclick="viewItem(this)">
+      <img src="images/churros.jpg" alt="Churros" />
+      <h2>Churros</h2>
+      <p>Crispy and fun.</p>
+    </div>
 
-  <div class="menu-item dessert" data-desc="Strawberry shortcake with whipped cream." onclick="speak(this)">
-    <img src="images/shortcake.jpg" alt="Shortcake" />
-    <h2>Strawberry Shortcake</h2>
-    <p>Light and fruity.</p>
-  </div>
-</main>
+    <div class="menu-item dessert" data-name="Strawberry Shortcake" data-desc="Strawberry shortcake with whipped cream." data-img="images/shortcake.jpg" onclick="viewItem(this)">
+      <img src="images/shortcake.jpg" alt="Strawberry Shortcake" />
+      <h2>Strawberry Shortcake</h2>
+      <p>Light and fruity.</p>
+    </div>
 
+  </main>
 
   <script src="script.js"></script>
 </body>
