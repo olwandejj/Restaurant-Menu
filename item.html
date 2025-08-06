@@ -20,8 +20,8 @@
       max-width: 400px;
       border-radius: 10px;
     }
-    .back-btn {
-      margin-top: 2em;
+    .back-btn, .audio-btn {
+      margin-top: 1.5em;
       display: inline-block;
       padding: 0.6em 1.2em;
       background-color: #ffaf40;
@@ -32,7 +32,7 @@
       cursor: pointer;
       text-decoration: none;
     }
-    .back-btn:hover {
+    .back-btn:hover, .audio-btn:hover {
       background-color: #ff9f1c;
     }
   </style>
@@ -42,20 +42,37 @@
     <h1 id="item-title"></h1>
     <img id="item-img" src="" alt="Dish Image" />
     <p id="item-desc"></p>
+
+    <button class="audio-btn" onclick="toggleAudio()">🔊 Play Description</button>
+    <br />
     <a href="index.html" class="back-btn">⬅️ Back to Menu</a>
+
+    <audio id="item-audio" preload="auto"></audio>
   </div>
 
   <script>
-    // Load data from localStorage
     const name = localStorage.getItem('itemName');
     const desc = localStorage.getItem('itemDesc');
     const img = localStorage.getItem('itemImg');
 
-    // Display on the page
     document.getElementById('item-title').textContent = name;
     document.getElementById('item-desc').textContent = desc;
     document.getElementById('item-img').src = img;
     document.getElementById('item-img').alt = name;
+
+    // Convert dish name to filename: "Garden Salad" -> "garden_salad.mp3"
+    const filename = name.toLowerCase().replace(/ /g, "_") + ".mp3";
+    const audio = document.getElementById('item-audio');
+    audio.src = 'audio/' + filename;
+
+    // Toggle audio playback
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
   </script>
 </body>
 </html>
